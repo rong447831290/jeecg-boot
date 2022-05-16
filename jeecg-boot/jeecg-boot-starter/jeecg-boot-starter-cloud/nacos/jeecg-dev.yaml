@@ -43,7 +43,7 @@ spring:
           #multi-datasource1:
           #url: jdbc:mysql://localhost:3306/jeecg-boot2?useUnicode=true&characterEncoding=utf8&autoReconnect=true&zeroDateTimeBehavior=convertToNull&transformedBitIsBoolean=true&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai
           #username: root
-          #password: root
+          #password: 447831
           #driver-class-name: com.mysql.cj.jdbc.Driver
   #redis 配置
   redis:
@@ -63,7 +63,7 @@ spring:
     host: jeecg-boot-rabbitmq
     username: guest
     password: guest
-    port: 5672
+    port: 15672
     publisher-confirms: true
     publisher-returns: true
     virtual-host: /

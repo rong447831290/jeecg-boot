@@ -1,5 +1,8 @@
+
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
+CREATE database if NOT EXISTS `jeecg-boot` default character set utf8mb4 collate utf8mb4_general_ci;
+USE `jeecg-boot`;
 
 -- ----------------------------
 -- Table structure for account

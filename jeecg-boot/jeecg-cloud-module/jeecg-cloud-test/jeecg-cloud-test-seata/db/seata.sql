@@ -16,7 +16,8 @@
 
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
-
+CREATE database if NOT EXISTS `seata` default character set utf8mb4 collate utf8mb4_general_ci;
+use `seata`;
 -- ----------------------------
 -- Table structure for branch_table
 -- ----------------------------

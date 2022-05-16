@@ -15,7 +15,7 @@ services:
   jeecg-boot-mysql:
     image: 81.70.17.111:5000/jeecg-boot-mysql:1.0
     environment:
-      MYSQL_ROOT_PASSWORD: root
+      MYSQL_ROOT_password: 447831
     restart: always
     container_name: jeecg-boot-mysql
     command:
