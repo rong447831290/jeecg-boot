@@ -1,4 +1,39 @@
+数据库生成配置
+datasource:
+url: jdbc:mysql://127.0.0.1:3306/jeecg-boot?characterEncoding=UTF-8&useUnicode=true&useSSL=false&tinyInt1isBit=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai
+username: root
+password: 447831
+driver-class-name: com.mysql.cj.jdbc.Driver
+platform: mysql
+schema: classpath:data-mysql.sql
+initialization-mode: always #开启初始化配置
+continue-on-error: false
+sql-script-encoding: utf-8
 
+然后会去执行data-mysql.sql文件中的sql语句，如果有错误，会抛出异常，如果没有错误，会执行完成。
+注意每次启动都会执行
+所以写
+DROP TABLE IF  EXISTS 注释掉
+CREATE TABLE IF NOT EXISTS 没有表就去创建
+REPLACE  INTO 如果重复先删除在插入
+
+如果数据库已有数据就注释掉
+#REPLACE  INTO 全部注释
+如果报错keymax值说明服务器设置问题 navicat里面依次执行以下命令
+
+    1： 系统变量innodb_large_prefix为ON
+
+    2： 系统变量innodb_file_format为Barracuda
+
+    3： ROW_FORMAT为DYNAMIC或COMPRESSED
+
+set global innodb_large_prefix=on;
+set global innodb_file_format=Barracuda;
+就可以了继续运行
+
+打包注意
+如果是c盘下必须使用cmd管理员运行项目才可以的
+# 微服务版本点击profiles后就会启动了
 
 ![JEECG](https://jeecgos.oss-cn-beijing.aliyuncs.com/files/site/jeecgfengm.png "JeecgBoot低代码开发平台")
 
