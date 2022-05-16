@@ -108,16 +108,16 @@ spring:
         allow:
       web-stat-filter:
         enabled: true
-    datasource:
-      url: jdbc:mysql://127.0.0.1:3306/jeecg-boot?characterEncoding=UTF-8&useUnicode=true&useSSL=false&tinyInt1isBit=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai
-      username: root
-      password: 447831
-      driver-class-name: com.mysql.cj.jdbc.Driver
-      platform: mysql
-      schema: classpath:data-mysql.sql
-      initialization-mode: always #开启初始化配置每次启动都会配置
-      continue-on-error: false
-      sql-script-encoding: utf-8
+      # 初始化数据库的配置springboot2.0后默认不需要配置
+#    url: jdbc:mysql://127.0.0.1:3306/jeecg-boot?characterEncoding=UTF-8&useUnicode=true&useSSL=false&tinyInt1isBit=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai
+#    username: root
+#    password: 447831
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    platform: mysql
+#    schema: classpath:data-mysql.sql
+#    initialization-mode: always #开启初始化配置每次启动都会配置
+#    continue-on-error: false
+#    sql-script-encoding: utf-8
     dynamic:
       druid: # 全局druid参数，绝大部分值和默认保持一致。(现已支持的参数如下,不清楚含义不要乱设置)
         # 连接池的配置信息
