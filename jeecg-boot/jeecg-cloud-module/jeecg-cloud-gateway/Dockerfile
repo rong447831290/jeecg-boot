@@ -8,7 +8,7 @@ RUN mkdir -p /jeecg-cloud-gateway
 
 WORKDIR /jeecg-cloud-gateway
 
-EXPOSE 9999
+EXPOSE 9998
 
 ADD ./target/jeecg-cloud-gateway-3.2.0.jar ./
 

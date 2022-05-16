@@ -25,7 +25,7 @@ services:
     build:
       context: ./jeecg-cloud-gateway
     ports:
-      - 9999:9999
+      - 9998:9998
     depends_on:
       - jeecg-boot-nacos
       - jeecg-boot-system
